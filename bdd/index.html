@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="vendor/mocha.css">
+    <script src="vendor/mocha.js"></script>
+    <script>
+        mocha.setup('bdd');
+    </script>
+
+    <script src="vendor/chai.js"></script>
+    <script>
+        var assert = chai.assert;
+    </script>
+</head>
+
+<body>
+
+<script>
+    function pow(x, n) {
+        if(n < 0) return NaN;
+        if(Math.round(n) != n) return NaN;
+        if(x === 0 && n === 0) return NaN;
+
+        var result = 1;
+        for(var i = 0; i < n; i ++) {
+            result *= x;
+        }
+        return result;
+    }
+</script>
+
+<script src="scripts/test.js"></script>
+
+<div id="mocha"></div>
+
+<script>
+    mocha.run();
+</script>
+</body>
+
+</html>
