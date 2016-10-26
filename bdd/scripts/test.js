@@ -42,3 +42,45 @@ describe("pow", function() {
     });
 
 });
+var expect = chai.expect;
+describe("testArray", function () {
+
+    describe('all', function () {
+        it('should be an array of strings', function () {
+            expect(testArray().all).to.satisfy(isArrayOfStrings);
+
+            function isArrayOfStrings(array) {
+                return array.every(function (item) {
+                    return typeof item === 'string';
+                })
+            }
+        });
+    });
+
+    describe('random', function () {
+        var randomItem = testArray().random();
+        it('should return a random item: ' + randomItem + ' from array: ' + testArray().all, function () {
+            expect(testArray().all).to.include(randomItem);
+        })
+    })
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -30,6 +30,19 @@
         }
         return result;
     }
+
+    function testArray() {
+        var colorsArray = ['red', 'green', 'orange'];
+        var test = {
+            all: colorsArray,
+            random: function () {
+                return colorsArray[Math.floor(Math.random() * colorsArray.length)];
+            }
+        };
+        return test;
+    }
+
+    console.log(testArray().random);
 </script>
 
 <script src="scripts/test.js"></script>
@@ -42,3 +55,32 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
