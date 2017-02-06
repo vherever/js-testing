@@ -1,0 +1,17 @@
+{
+  "name": "ts-mocha-testing",
+  "version": "1.0.0",
+  "description": "Getting Started with TypeScript and Mocha",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "pretest": "tsc test/CalculatorTest.ts --module commonjs",
+    "prepublish": "tsc index.ts --module commonjs ",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
